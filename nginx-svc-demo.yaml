@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc-demo
+  labels:
+    env: qa
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    env: qa
